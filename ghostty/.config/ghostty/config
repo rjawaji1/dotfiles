@@ -1,0 +1,37 @@
+# theme = dark:everforest-dark,light:everforest-light
+theme = vague
+command = /opt/homebrew/bin/fish
+custom-shader = shaders/cursor_sweep.glsl
+
+font-size = 16
+font-thicken = true
+
+mouse-hide-while-typing = true
+
+macos-icon = xray
+macos-titlebar-style = hidden
+macos-option-as-alt = true
+
+auto-update = off
+
+# Unbind Keys
+keybind = cmd+digit_1=unbind
+keybind = cmd+digit_2=unbind
+keybind = cmd+digit_3=unbind
+keybind = cmd+digit_4=unbind
+keybind = cmd+digit_5=unbind
+keybind = cmd+digit_6=unbind
+keybind = cmd+digit_7=unbind
+keybind = cmd+digit_8=unbind
+keybind = cmd+digit_9=unbind
+
+# Expecting you to have \x02 (ctl+b) as tmux prefix
+keybind = cmd+one=text:\x02\x31
+keybind = cmd+two=text:\x02\x32
+keybind = cmd+three=text:\x02\x33
+keybind = cmd+four=text:\x02\x34
+keybind = cmd+five=text:\x02\x35
+keybind = cmd+six=text:\x02\x36
+keybind = cmd+seven=text:\x02\x37
+keybind = cmd+eight=text:\x02\x38
+keybind = cmd+nine=text:\x02\x39

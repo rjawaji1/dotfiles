@@ -1,0 +1,44 @@
+return {
+	"twhlynch/elk.nvim",
+	opts = {
+		-- command or path to elk binary
+		binary = "elk",
+		-- debounce milliseconds in between runs
+		debounce = 50,
+		-- filetypes to attach to
+		filetypes = { "asm", "lc3" },
+		-- minimum diagnostic level to report
+		-- "err" to ignore warnings and info, "warn" to ignore info
+		level = "info",
+		-- disable diagnostics for this policy set
+		-- can be a table like { "+laser", "extension.stack_instructions", ... }
+		-- or a string like "+laser,extension.stack_instructions"
+		-- see https://codeberg.org/dxrcy/elk/src/branch/master/DOCS.md#policies
+		permit = { "+laser" },
+		-- override trap aliases to parse
+		-- can prevent warnings when using non-standard traps such as for ELCI integration
+		-- requires specifying all traps not just new ones
+		-- can be a table like { putn = 0x26, reg = 0x27, ... }
+		-- or a string like "putn=0x26,reg=0x27,..."
+		trap_aliases = {
+			-- base LC-3
+			getc = 0x20,
+			out = 0x21,
+			puts = 0x22,
+			["in"] = 0x23,
+			putsp = 0x24,
+			halt = 0x25,
+			-- debug extensions
+			putn = 0x26,
+			reg = 0x27,
+			-- ELCI integration
+			chat = 0x28,
+			getp = 0x29,
+			setp = 0x2a,
+			getb = 0x2b,
+			setb = 0x2c,
+			geth = 0x2d,
+		},
+		completion = true,
+	},
+}

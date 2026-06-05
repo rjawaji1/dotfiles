@@ -17,6 +17,11 @@ alias cat="bat -p"
 
 alias :q="exit"
 
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+alias gs="git status"
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."

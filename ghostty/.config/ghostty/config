@@ -3,7 +3,7 @@ theme = vague
 command = /opt/homebrew/bin/fish
 custom-shader = shaders/cursor_sweep.glsl
 
-font-size = 16
+font-size = 18
 font-thicken = true
 
 mouse-hide-while-typing = true

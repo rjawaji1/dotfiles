@@ -22,14 +22,19 @@ vim.diagnostic.config({
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
-	callback = function(event)
-		local map = function(keys, func, desc, mode)
-			mode = mode or "n"
-			vim.keymap.set(mode, keys, func, { buf = event.buf, desc = "LSP: " .. desc })
-		end
+	callback = function(e)
+		-- Goto Keybinds
+		vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { buf = e.buf, desc = "Goto definition" })
+		vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, { buf = e.buf, desc = "Goto declaration" })
+		vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { buf = e.buf, desc = "Goto references" })
+		vim.keymap.set("n", "<leader>gy", vim.lsp.buf.type_definition, { buf = e.buf, desc = "Goto type definition" })
+		vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, { buf = e.buf, desc = "Goto implementation" })
 
-		map("gd", vim.lsp.buf.definition, "[G]o to [D]efinition")
-
-		vim.keymap.set("n", "<leader>lk", vim.diagnostic.open_float, { buf = event.buf, desc = "Open float" })
+		-- stylua: ignore start
+		vim.keymap.set("n", "K", function() vim.lsp.buf.hover({ border = "rounded" }) end, { buf = e.buf, desc = "Hover" })
+		vim.keymap.set("n", "a", vim.lsp.buf.code_action, { buf = e.buf, desc = "Perform code action" })
+		vim.keymap.set("n", "r", vim.lsp.buf.rename, { buf = e.buf, desc = "Rename symbol" })
+		vim.keymap.set("n", "<leader>lk", vim.diagnostic.open_float, { buf = e.buf, desc = "Show lsp diagnotic float" })
+		-- stylua: ignore end
 	end,
 })

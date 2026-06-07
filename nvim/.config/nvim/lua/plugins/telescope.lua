@@ -28,8 +28,8 @@ return {
 		}
 	end,
 	keys = {
-		{ "<leader>f", "<cmd>Telescope find_files<cr>", mode = "", desc = "find [f]iles" },
-		{ "<leader>b", "<cmd>Telescope buffers<cr>", mode = "", desc = "find [b]uffer" },
-		{ "<leader>/", "<cmd>Telescope live_grep<cr>", mode = "", desc = "live grep" },
+		{ "<leader>f", "<cmd>Telescope find_files<cr>", mode = "", desc = "Open file picker" },
+		{ "<leader>b", "<cmd>Telescope buffers<cr>", mode = "", desc = "Open buffer picker" },
+		{ "<leader>/", "<cmd>Telescope live_grep<cr>", mode = "", desc = "Global search in workspace folder" },
 	},
 }

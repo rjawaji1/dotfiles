@@ -4,12 +4,12 @@ return {
 	cmd = { "ConformInfo" },
 	keys = {
 		{
-			"<leader>l",
+			"<leader>lf",
 			function()
 				require("conform").format({ async = true })
 			end,
 			mode = "",
-			desc = "Format buffer",
+			desc = "[l]sp [f]ormat buffer",
 		},
 	},
 	-- This will provide type hinting with LuaLS

@@ -35,15 +35,15 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 -- Render whitespace characters
-vim.opt.list = true
-vim.opt.listchars = {
-	tab = "→ ",
-	trail = "~",
-	lead = "·",
-	nbsp = "␣",
-	extends = "…",
-	precedes = "…",
-}
+-- vim.opt.list = true
+-- vim.opt.listchars = {
+-- 	tab = "→ ",
+-- 	trail = "~",
+-- 	lead = "·",
+-- 	nbsp = "␣",
+-- 	extends = "…",
+-- 	precedes = "…",
+-- }
 
 vim.opt.winborder = "rounded"
 vim.opt.fillchars:append({ eob = " " })

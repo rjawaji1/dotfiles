@@ -31,8 +31,8 @@ end)
 local web_languages = {
 	"javascript",
 	"typescript",
-	"jsx",
-	"tsx",
+	"javascriptreact",
+	"typescriptreact",
 	"json",
 	"html",
 	"css",
@@ -43,6 +43,7 @@ for _, filetype in ipairs(web_languages) do
 		vim.bo.tabstop = 2
 		vim.bo.softtabstop = 2
 		vim.bo.shiftwidth = 2
+		vim.bo.expandtab = true
 	end)
 end
 

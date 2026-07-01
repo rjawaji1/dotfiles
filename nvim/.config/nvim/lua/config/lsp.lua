@@ -32,8 +32,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 		-- stylua: ignore start
 		vim.keymap.set("n", "K", function() vim.lsp.buf.hover({ border = "rounded" }) end, { buf = e.buf, desc = "Hover" })
-		vim.keymap.set("n", "a", vim.lsp.buf.code_action, { buf = e.buf, desc = "Perform code action" })
-		vim.keymap.set("n", "r", vim.lsp.buf.rename, { buf = e.buf, desc = "Rename symbol" })
+		vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action, { buf = e.buf, desc = "Perform code action" })
+		vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, { buf = e.buf, desc = "Rename symbol" })
 		vim.keymap.set("n", "<leader>lk", vim.diagnostic.open_float, { buf = e.buf, desc = "Show lsp diagnotic float" })
 		-- stylua: ignore end
 	end,

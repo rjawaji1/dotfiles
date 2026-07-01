@@ -8,16 +8,10 @@ return { -- File Explorer
 	lazy = false, -- neo-tree will lazily load itself
 	keys = {
 		{
-			"<leader>e",
+			"<leader>E",
 			"<cmd>Neotree filesystem toggle right<cr>",
 			mode = "",
-			desc = "[e] explore file tree",
-		},
-		{
-			"<leader>z",
-			"<cmd>Neotree filesystem toggle float<cr>",
-			mode = "",
-			desc = "explore file tree float",
+			desc = "Open file explorer",
 		},
 	},
 }

@@ -117,9 +117,9 @@ return {
 					highlights.DiagnosticUnderlineWarn.bold = nil
 				end,
 			})
-			vim.cmd("colorscheme vague")
-			vim.cmd(":hi BlinkCmpMenu guibg=NONE")
-			vim.cmd(":hi statusline guibg=NONE")
+			-- vim.cmd("colorscheme vague")
+			-- vim.cmd(":hi BlinkCmpMenu guibg=NONE")
+			-- vim.cmd(":hi statusline guibg=NONE")
 		end,
 	},
 	-- use devicons first then mini icons for fallbacks and folders

@@ -5,6 +5,7 @@ local lsp_list = {
 	"emmet",
 	"vtsls",
 	"phpactor",
+	"tailwindcss",
 }
 
 return { -- Lsp Config

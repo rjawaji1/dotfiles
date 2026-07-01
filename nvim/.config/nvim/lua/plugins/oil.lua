@@ -1,9 +1,14 @@
 return {
 	"stevearc/oil.nvim",
-	opts = {},
+	opts = {
+		columns = {
+			"icon",
+			"permissions",
+		},
+	},
 	dependencies = { { "nvim-mini/mini.icons", opts = {} } },
 	lazy = false,
 	keys = {
-		{ "<leader>E", "<cmd>Oil<cr>", mode = "n", desc = "[E]xplore files" },
+		{ "<leader>e", "<cmd>Oil<cr>", mode = "n", desc = "[E]xplore files" },
 	},
 }

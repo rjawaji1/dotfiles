@@ -7,6 +7,12 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 			formatters_by_ft = {
 				lua = { "stylua" },
 
+				-- C & CPP
+				c = { "clang-format" },
+				h = { "clang-format" },
+				cpp = { "clang-format" },
+				gpp = { "clang-format" },
+
 				-- React & HTML
 				javascript = { "oxfmt" },
 				javascriptreact = { "oxfmt" },

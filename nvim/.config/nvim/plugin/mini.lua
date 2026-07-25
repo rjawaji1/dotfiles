@@ -2,6 +2,7 @@ vim.pack.add({
 	"https://github.com/nvim-mini/mini.icons",
 	"https://github.com/nvim-mini/mini.pick",
 	"https://github.com/nvim-mini/mini.bufremove",
+	"https://github.com/nvim-mini/mini.surround",
 })
 
 require("mini.icons").setup()
@@ -20,6 +21,7 @@ require("mini.pick").setup({
 		end,
 	},
 })
+require("mini.surround").setup()
 
 vim.keymap.set("n", "<leader>f", "<cmd>Pick files<cr>", { desc = "Open file picker" })
 vim.keymap.set("n", "<leader>b", "<cmd>Pick buffers<cr>", { desc = "Open buffer picker" })

@@ -36,5 +36,5 @@ vim.opt.mouse = "a"
 vim.opt.winborder = "rounded"
 vim.opt.fillchars:append({ eob = " " })
 
-vim.opt.updatetime = 250
+vim.opt.updatetime = 50
 vim.opt.timeoutlen = 300

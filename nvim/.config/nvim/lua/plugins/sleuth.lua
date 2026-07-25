@@ -1,1 +1,0 @@
-return { "twhlynch/vim-sleuth" }

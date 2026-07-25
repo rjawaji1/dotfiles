@@ -2,13 +2,13 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-# set XDG_CONFIG_HOME="$HOME/.config"
-
 set -gx EDITOR nvim
 
 set -gx PATH /opt/homebrew/bin $PATH
 set -gx PATH $HOME/.local/bin $PATH
 set -gx PATH $HOME/.config/composer/vendor/bin $PATH
+
+set -gx XDG_CONFIG_HOME $HOME/.config
 
 # set -gx PATH $HOME/Library/Application\x20Support/Herd/bin $PATH
 

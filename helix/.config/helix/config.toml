@@ -1,9 +1,10 @@
-theme = "ayu_evolve"
+theme = "everforest_dark"
 
 [editor]
 line-number = "relative"
 cursorline = true
 color-modes = true
+end-of-line-diagnostics = "hint"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -12,3 +13,7 @@ select = "underline"
 
 [editor.indent-guides]
 render = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "disable"

@@ -6,6 +6,8 @@ vim.pack.add({
 })
 
 require("mini.icons").setup()
+require("mini.icons").mock_nvim_web_devicons()
+
 require("mini.pick").setup({
 	window = {
 		config = function()
@@ -21,6 +23,7 @@ require("mini.pick").setup({
 		end,
 	},
 })
+
 require("mini.surround").setup()
 
 vim.keymap.set("n", "<leader>f", "<cmd>Pick files<cr>", { desc = "Open file picker" })

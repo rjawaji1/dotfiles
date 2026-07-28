@@ -1,5 +1,6 @@
-vim.api.nvim_create_autocmd("LspAttach", {
-	pattern = "*.lua",
+vim.api.nvim_create_autocmd("FileType", {
+	once = true,
+	pattern = { "lua" },
 	callback = function()
 		vim.pack.add({ "https://github.com/folke/lazydev.nvim" })
 		require("lazydev").setup({

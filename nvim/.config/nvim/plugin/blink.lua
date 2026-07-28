@@ -1,17 +1,32 @@
-vim.api.nvim_create_autocmd("InsertEnter", {
+vim.pack.add({
+	"https://github.com/saghen/blink.lib",
+
+	"https://github.com/saghen/blink.cmp",
+	"https://github.com/saghen/blink.pairs",
+	"https://github.com/saghen/blink.indent",
+
+	-- Deps
+	"https://github.com/rafamadriz/friendly-snippets",
+	"https://github.com/folke/lazydev.nvim",
+})
+
+vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
 	once = true,
 	callback = function()
-		vim.pack.add({
-			"https://github.com/saghen/blink.lib",
-			"https://github.com/saghen/blink.cmp",
-			"https://github.com/saghen/blink.pairs",
-			"https://github.com/saghen/blink.indent",
-
-			-- Deps
-			"https://github.com/rafamadriz/friendly-snippets",
-			"https://github.com/folke/lazydev.nvim",
+		require("blink.indent").setup({
+			static = {
+				char = "│",
+			},
+			scope = {
+				char = "│",
+			},
 		})
+	end,
+})
 
+vim.api.nvim_create_autocmd({ "InsertEnter", "CmdlineEnter" }, {
+	once = true,
+	callback = function()
 		require("blink.cmp").setup({
 			keymap = { preset = "default" },
 
@@ -42,14 +57,5 @@ vim.api.nvim_create_autocmd("InsertEnter", {
 		})
 
 		require("blink.pairs").setup({})
-
-		require("blink.indent").setup({
-			static = {
-				char = "│",
-			},
-			scope = {
-				char = "│",
-			},
-		})
 	end,
 })

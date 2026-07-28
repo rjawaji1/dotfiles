@@ -13,4 +13,6 @@ require("everforest").setup({
 		hl.BlinkPairsBlue = { fg = palette.blue }
 	end,
 })
+
 require("everforest").load()
+

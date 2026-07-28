@@ -10,6 +10,10 @@ vim.keymap.set("n", "<leader>wJ", "<C-w>J", { desc = "Swap split with split belo
 vim.keymap.set("n", "<leader>wK", "<C-w>K", { desc = "Swap split with split above" })
 vim.keymap.set("n", "<leader>wL", "<C-w>L", { desc = "Swap split with right split" })
 
+-- Easy Splits
+vim.keymap.set("n", "<leader>ws", "<cmd>split<cr>", { desc = "Horizontal bottom split" })
+vim.keymap.set("n", "<leader>wv", "<cmd>vsplit<cr>", { desc = "Vertical right split" })
+
 -- Window Deletions
 vim.keymap.set("n", "<leader>wq", "<cmd>bdelete<cr>", { desc = "Close window" })
 vim.keymap.set("n", "<leader>wo", "<cmd>%bd|e#|bd#<cr>", { desc = "Close windows except current" })

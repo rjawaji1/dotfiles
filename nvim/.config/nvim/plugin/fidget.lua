@@ -4,6 +4,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.pack.add({
 			"https://github.com/j-hui/fidget.nvim",
 		})
+
 		require("fidget").setup({})
 	end,
 })

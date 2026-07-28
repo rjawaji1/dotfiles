@@ -69,9 +69,21 @@
       "rev": "b73018b75affd13fa38e2fc94ef753b465f770d7",
       "src": "https://github.com/stevearc/oil.nvim"
     },
+    "omni-preview.nvim": {
+      "rev": "a1370762051cd5a871d5a655b2e3352a100b9ce5",
+      "src": "https://github.com/SylvanFranklin/omni-preview.nvim"
+    },
     "oxocarbon.nvim": {
       "rev": "cad101019701846b1c69747e4cae3c460376d674",
       "src": "https://github.com/nyoom-engineering/oxocarbon.nvim"
+    },
+    "peek.nvim": {
+      "rev": "5820d937d5414baea5f586dc2a3d912a74636e5b",
+      "src": "https://github.com/toppair/peek.nvim"
+    },
+    "typst-preview.nvim": {
+      "rev": "1c2e19486397be1c580b560fc50ee36abe329c46",
+      "src": "https://github.com/chomosuke/typst-preview.nvim"
     },
     "vim-sleuth": {
       "rev": "56aacd59b8b75f7138d00c740d7e2f95bd1cbd41",

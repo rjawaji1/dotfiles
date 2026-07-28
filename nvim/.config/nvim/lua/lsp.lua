@@ -29,13 +29,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight, e.buf) then
 			local highlight_augroup = vim.api.nvim_create_augroup("lsp-highlight", { clear = false })
 			vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
-				buffer = e.buf,
+				buf = e.buf,
 				group = highlight_augroup,
 				callback = vim.lsp.buf.document_highlight,
 			})
 
 			vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
-				buffer = e.buf,
+				buf = e.buf,
 				group = highlight_augroup,
 				callback = vim.lsp.buf.clear_references,
 			})
@@ -44,17 +44,17 @@ vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("lsp-detach", { clear = true }),
 				callback = function(event2)
 					vim.lsp.buf.clear_references()
-					vim.api.nvim_clear_autocmds({ group = "lsp-highlight", buffer = event2.buf })
+					vim.api.nvim_clear_autocmds({ group = "lsp-highlight", buf = event2.buf })
 				end,
 			})
 		end
 
 		-- Goto Keybinds
-		vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { buf = e.buf, desc = "Goto definition" })
-		vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, { buf = e.buf, desc = "Goto declaration" })
-		vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { buf = e.buf, desc = "Goto references" })
-		vim.keymap.set("n", "<leader>gy", vim.lsp.buf.type_definition, { buf = e.buf, desc = "Goto type definition" })
-		vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, { buf = e.buf, desc = "Goto implementation" })
+		vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buf = e.buf, desc = "Goto definition" })
+		vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buf = e.buf, desc = "Goto declaration" })
+		vim.keymap.set("n", "gr", vim.lsp.buf.references, { buf = e.buf, desc = "Goto references" })
+		vim.keymap.set("n", "gy", vim.lsp.buf.type_definition, { buf = e.buf, desc = "Goto type definition" })
+		vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buf = e.buf, desc = "Goto implementation" })
 
 
 		-- stylua: ignore start
@@ -71,6 +71,7 @@ vim.lsp.enable({
 	"lua_ls",
 	"jdtls",
 	"clangd",
+	"tinymist",
 
 	-- Python
 	"ty",

@@ -24,3 +24,18 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clip
 -- Interactive visual line indent
 vim.keymap.set({ "n", "v" }, "<", "<gv", { desc = "Visually indent line" })
 vim.keymap.set({ "n", "v" }, ">", ">gv", { desc = "Visually indent line" })
+
+-- Visual Move
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Binary Handling
+vim.keymap.set("n", "<leader>bht", function()
+	if vim.bo.bin then
+		vim.cmd("%!xxd -r")
+		vim.bo.bin = false
+	else
+		vim.bo.bin = true
+		vim.cmd("%!xxd")
+	end
+end, { desc = "Binary/Hex Toggle" })

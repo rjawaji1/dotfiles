@@ -39,4 +39,5 @@ vim.opt.fillchars:append({ eob = " " })
 vim.opt.updatetime = 50
 vim.opt.timeoutlen = 300
 
+vim.opt.winborder = "single"
 vim.opt.guicursor = "n:block,i-ci-ve:ver25,v-r-cr:hor20"

@@ -44,7 +44,6 @@ vim.api.nvim_create_autocmd({ "InsertEnter", "CmdlineEnter" }, {
 	callback = function()
 		require("blink.cmp").setup({
 			keymap = { preset = "default" },
-
 			appearance = {
 				-- Icon spacing
 				nerd_font_variant = "mono",
@@ -52,7 +51,11 @@ vim.api.nvim_create_autocmd({ "InsertEnter", "CmdlineEnter" }, {
 			completion = {
 				-- `<c-space>` to show documentation or `auto_show` to true
 				documentation = { auto_show = true, auto_show_delay_ms = 500 },
+				menu = {
+					border = "none",
+				},
 			},
+			snippets = { preset = "luasnip" },
 			sources = {
 				default = { "lsp", "path", "snippets", "buffer" },
 				per_filetype = {

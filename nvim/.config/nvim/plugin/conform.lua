@@ -8,6 +8,9 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 			formatters_by_ft = {
 				lua = { "stylua" },
 
+				-- Java
+				java = { "palantir-java-format" },
+
 				-- C & CPP
 				c = { "clang-format" },
 				h = { "clang-format" },
@@ -15,6 +18,9 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 				gpp = { "clang-format" },
 
 				-- React & HTML
+				html = { "prettier" },
+				css = { "prettier" },
+
 				javascript = { "oxfmt" },
 				javascriptreact = { "oxfmt" },
 				typescript = { "oxfmt" },

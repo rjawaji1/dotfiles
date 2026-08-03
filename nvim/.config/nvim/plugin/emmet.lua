@@ -1,4 +1,4 @@
-vim.api.nvim_create_autocmd("LspAttach", {
+vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "astro", "html", "css", "typescriptreact", "vue" },
 	once = true,
 	callback = function()

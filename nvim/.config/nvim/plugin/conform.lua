@@ -20,6 +20,8 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 				-- React & HTML
 				html = { "prettier" },
 				css = { "prettier" },
+				json = { "oxfmt" },
+				jsonc = { "oxfmt" },
 
 				javascript = { "oxfmt" },
 				javascriptreact = { "oxfmt" },

@@ -12,6 +12,8 @@ end
 
 local textwidths = {
 	c = 80,
+	typescript = 120,
+	typescriptreact = 120,
 	java = 120,
 }
 

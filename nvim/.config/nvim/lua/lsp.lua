@@ -83,6 +83,7 @@ vim.lsp.enable({
 	"oxlint",
 	"emmet",
 	"cssls",
+	"jsonls",
 	"html",
 	"superhtml",
 })

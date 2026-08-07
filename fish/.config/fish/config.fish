@@ -6,14 +6,16 @@ set -gx EDITOR nvim
 
 set -gx PATH /opt/homebrew/bin $PATH
 set -gx PATH $HOME/.local/bin $PATH
-set -gx PATH $HOME/.config/composer/vendor/bin $PATH
+# set -gx PATH $HOME/.config/composer/vendor/bin $PATH
 
 set -gx XDG_CONFIG_HOME $HOME/.config
 
-# set -gx PATH $HOME/Library/Application\x20Support/Herd/bin $PATH
+set -gx PATH $HOME/Library/Application\x20Support/Herd/bin $PATH
 
+alias v="nvim"
 alias vi="nvim"
 alias ls="eza --group-directories-first"
+alias lsa="eza --group-directories-first -l"
 alias cat="bat -p"
 
 alias :q="exit"

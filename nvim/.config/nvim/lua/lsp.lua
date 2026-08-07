@@ -86,4 +86,6 @@ vim.lsp.enable({
 	"jsonls",
 	"html",
 	"superhtml",
+
+	"ols",
 })

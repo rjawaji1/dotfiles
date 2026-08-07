@@ -8,6 +8,8 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 			formatters_by_ft = {
 				lua = { "stylua" },
 
+				odin = { "odinfmt" },
+
 				-- Java
 				java = { "palantir-java-format" },
 
@@ -34,6 +36,14 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 			format_on_save = {
 				timeout_ms = 500,
 				lsp_format = "fallback",
+			},
+			formatters = {
+				odinfmt = {
+					-- Change where to find the command if it isn't in your path.
+					command = "odinfmt",
+					args = { "-stdin" },
+					stdin = true,
+				},
 			},
 		})
 	end,

@@ -36,6 +36,7 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
 				char = "│",
 			},
 		})
+		require("blink.pairs").setup({})
 	end,
 })
 
@@ -73,7 +74,5 @@ vim.api.nvim_create_autocmd({ "InsertEnter", "CmdlineEnter" }, {
 			fuzzy = { implementation = "prefer_rust_with_warning" },
 			signature = { enabled = true },
 		})
-
-		require("blink.pairs").setup({})
 	end,
 })

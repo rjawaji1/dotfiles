@@ -15,6 +15,7 @@ local textwidths = {
 	typescript = 120,
 	typescriptreact = 120,
 	java = 120,
+	markdown = 80,
 }
 
 for filetype, textwidth in pairs(textwidths) do

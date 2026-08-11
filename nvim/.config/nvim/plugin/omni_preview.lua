@@ -1,5 +1,5 @@
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "typst", "markdown" },
+	pattern = { "typst", "markdown", "html" },
 	once = true,
 	callback = function()
 		vim.pack.add({
@@ -8,6 +8,7 @@ vim.api.nvim_create_autocmd("FileType", {
 			-- Deps
 			"https://github.com/chomosuke/typst-preview.nvim",
 			"https://github.com/toppair/peek.nvim",
+			"https://github.com/barrettruth/live-server.nvim",
 		})
 
 		require("omni-preview").setup()

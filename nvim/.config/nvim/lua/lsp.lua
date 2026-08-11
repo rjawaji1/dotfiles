@@ -87,5 +87,6 @@ vim.lsp.enable({
 	"html",
 	"superhtml",
 
-	"ols",
+	-- php
+	"phpantom",
 })

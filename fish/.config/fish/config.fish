@@ -1,10 +1,20 @@
 if status is-interactive
+	# Launch Into Tmux
+	# if not set -q TMUX
+	# 	tmux has-session -t scratch 2>/dev/null
+	# 	or tmux new-session -d -s scratch
+	#
+	# 	exec tmux attach-session -t scratch
+	# end
+
     # Commands to run in interactive sessions can go here
 	starship init fish | source
-	tv init fish | source
+	# tv init fish | source
+	fzf --fish | source
 	mise activate fish | source
 
 	zoxide init fish | source
+
 
 	alias v="nvim"
 	alias vi="nvim"

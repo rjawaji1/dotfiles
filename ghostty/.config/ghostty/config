@@ -1,8 +1,4 @@
-# theme = dark:everforest-dark,light:everforest-light
-# theme = vague
 theme = Everforest Dark
-# theme = Ayu Dark Evolve
-custom-shader = shaders/cursor_sweep.glsl
 
 font-size = 18
 font-thicken = true

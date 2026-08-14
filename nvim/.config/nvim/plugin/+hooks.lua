@@ -15,7 +15,8 @@ vim.api.nvim_create_autocmd("PackChanged", {
 				vim.cmd.packadd("blink.lib")
 				vim.cmd.packadd("blink.cmp")
 			end
-			require("blink.cmp").build():pwait()
+
+			---@diagnostic disable-next-line: undefined-field
 			require("blink.cmp").build():pwait()
 		end
 		if name == "blink.pairs" and (kind == "install" or kind == "update") then
@@ -23,6 +24,8 @@ vim.api.nvim_create_autocmd("PackChanged", {
 				vim.cmd.packadd("blink.lib")
 				vim.cmd.packadd("blink.pairs")
 			end
+
+			---@diagnostic disable-next-line: undefined-field
 			require("blink.pairs").build():pwait()
 		end
 		-- LuaSnip Build Hook

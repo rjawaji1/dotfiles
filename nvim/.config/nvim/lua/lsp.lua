@@ -71,6 +71,7 @@ vim.lsp.enable({
 	"lua_ls",
 	"jdtls",
 	"clangd",
+	"tinymist",
 
 	-- Python
 	"ty",

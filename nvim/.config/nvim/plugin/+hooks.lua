@@ -16,6 +16,7 @@ vim.api.nvim_create_autocmd("PackChanged", {
 				vim.cmd.packadd("blink.cmp")
 			end
 
+			vim.notify("Building blink.cmp")
 			---@diagnostic disable-next-line: undefined-field
 			require("blink.cmp").build():pwait()
 		end
@@ -25,6 +26,7 @@ vim.api.nvim_create_autocmd("PackChanged", {
 				vim.cmd.packadd("blink.pairs")
 			end
 
+			vim.notify("Building blink.pairs")
 			---@diagnostic disable-next-line: undefined-field
 			require("blink.pairs").build():pwait()
 		end

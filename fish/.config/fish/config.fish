@@ -1,17 +1,13 @@
 if status is-interactive
 	# Launch Into Tmux
-	# if not set -q TMUX
-	# 	tmux has-session -t scratch 2>/dev/null
-	# 	or tmux new-session -d -s scratch
-	#
-	# 	exec tmux attach-session -t scratch
-	# end
+	if test "$TERM_PROGRAM" = ghostty; and not set -q TMUX
+		tmux attach-session >/dev/null 2>&1
+		or tmux
+	end
 
     # Commands to run in interactive sessions can go here
 	starship init fish | source
-	# tv init fish | source
 	fzf --fish | source
-	mise activate fish | source
 
 	zoxide init fish | source
 
@@ -33,12 +29,6 @@ if status is-interactive
 	alias ...="cd ../.."
 	alias ....="cd ../../.."
 	alias .....="cd ../../../.."
-	alias ......="cd ../../../../.."
-	alias .......="cd ../../../../../.."
-	alias ........="cd ../../../../../../.."
-	alias .........="cd ../../../../../../../.."
-	alias ..........="cd ../../../../../../../../.."
-	alias ...........="cd ../../../../../../../../../.."
 end
 
 set -gx EDITOR nvim
@@ -46,19 +36,16 @@ set -gx VISUAL nvim
 
 set -gx PATH /opt/homebrew/bin $PATH
 set -gx PATH $HOME/.local/bin $PATH
-# set -gx PATH $HOME/.config/composer/vendor/bin $PATH
 
 set -gx XDG_CONFIG_HOME $HOME/.config
 
 set -gx PATH $HOME/Library/Application\x20Support/Herd/bin $PATH
 
-
 # Postgres
 set -gx PATH /opt/homebrew/opt/libpq/bin $PATH
 
-set -gx LDFLAGS -L/opt/homebrew/opt/libpq/lib $LDFLAGS
-set -gx CPPFLAGS -I/opt/homebrew/opt/libpq/include $CPPFLAGS
-
+# Important 
+mise activate fish | source
 
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
